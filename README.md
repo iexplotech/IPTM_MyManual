@@ -9,7 +9,7 @@ To join IPTM Testnet network, You must setup as follows: <br>
 <br>
 
 ## 1.0 Setup IPTM Sealer Node
-### Node Only for Write Ledger in IPTM Testnet. Not for other purposes!
+### Privileged Node! Only for Write Ledger in IPTM Testnet. Not for other purposes!
 #### Windows 10, Refer this manual: my_manual_iptm_sealer_node_2020_windows.txt 
 * Not recomended to run a Sealer Node in Windows OS! <br>
 #### Linux, Refer this manual: my_manual_iptm_sealer_node_2020_linux.txt 
