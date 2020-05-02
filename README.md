@@ -6,8 +6,8 @@ To join IPTM Testnet network, You must setup as follows: <br>
 3.0 Setup IPTM Bootnodes Client <br> 
 <br>
 1.0 Setup IPTM Sealer Node is limited to registered IPTM members (Universities in Malaysia) <br>
-
 <br>
+
 ## 1.0 Setup IPTM Sealer Node
 ### Node Only for Write Ledger in IPTM Testnet. Not for other purposes!
 #### Windows 10, Refer this manual: my_manual_iptm_sealer_node_2020_windows.txt (* Not recomended to run a Sealer Node in Windows OS!) <br>
