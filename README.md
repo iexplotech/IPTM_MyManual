@@ -11,9 +11,9 @@ To join IPTM Testnet network, You must setup as follows: <br>
 ## 1.0 Setup IPTM Sealer Node
 ### Node Only for Write Ledger in IPTM Testnet. Not for other purposes!
 #### Windows 10, Refer this manual: my_manual_iptm_sealer_node_2020_windows.txt 
-(* Not recomended to run a Sealer Node in Windows OS!) <br>
+* Not recomended to run a Sealer Node in Windows OS! <br>
 #### Linux, Refer this manual: my_manual_iptm_sealer_node_2020_linux.txt 
-(* Strongly recomended!)<br>
+* Strongly recomended!<br>
 <br>
 
 ## 2.0 Setup IPTM Normal Node
@@ -29,4 +29,4 @@ You must setup Bootnodes Client to for your IPTM Sealer and Normal Nodes. <br>
 If not running IPTM Bootnodes Client, your geth always at block 0 because not connected to other IPTM peers.
 #### Windows 10, Refer this manual: my_manual_bootnodes_client_iptm2020_windows.txt <br>
 #### Linux, Refer this manual: my_manual_bootnodes_client_iptm2020_linux.txt
-(* included manual for bootnodes server) <br>
+* included manual for bootnodes server <br>
