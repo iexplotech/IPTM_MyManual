@@ -30,9 +30,9 @@ You must setup Bootnodes Client to for your IPTM Sealer and Normal Nodes. <br>
 If not running IPTM Bootnodes Client, your geth always at block 0 because not connected to other IPTM peers.
 #### Windows 10, Refer this manual: my_manual_bootnodes_client_iptm2020_windows.txt <br>
 #### Linux, Refer this manual: my_manual_bootnodes_client_iptm2020_linux.txt
-* included manual for bootnodes server <br>
+* included manual for bootnodes server
 <br> <br>
 
-## 4.0 Setup IPTM Blockscout Deskboard
+## 4.0 IPTM Blockscout Deskboard
 ### Deskboard for Blockchain Transactions, Smartcontract Transactions etc.
 Not Setup yet. <br>
