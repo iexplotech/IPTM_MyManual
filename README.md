@@ -5,7 +5,7 @@ All Manuals for IPTM Projects. Use Notepad++ to open these manuals. Download Her
 ### Node Only for Write Ledger in IPTM Testnet. Not for other purposes!
 Windows 10, Refer this manual: my_manual_iptm_sealer_node_2020_windows.txt (* Not recomended to run a Sealer Node in Windows OS!) <br>
 Linux, Refer this manual: my_manual_iptm_sealer_node_2020_linux.txt (* Strongly recomeded!)
-<P>
+<br>
 
 ## Setup IPTM Normal Node
 ### For IPTM Network Transactions, Blockchain Transactions, Smartcontract Transactions etc.
