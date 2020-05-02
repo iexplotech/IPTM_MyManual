@@ -1,0 +1,93 @@
+#################################################################
+# Manual: Setup IPTM Bootnode Client 2020 in Linux OS           #
+# Prepare By: Dr. Mohd Anuar Mat Isa                            #
+# Version: 1.0, 01 May 2020                                     #
+# License: GNU GPL3, www.iexplotech.com, github.com/iexplotech  #
+#################################################################
+
+* Open this manual using Notepad++ for better view!
+
+#### Setup IPTM Bootnode Client 2020 in Linux ####
+# 1. Create new project directory
+cd ~
+ls -l
+mkdir IPTM2020
+cd IPTM2020
+mkdir IPTM_TESTNET2020
+cd IPTM_TESTNET2020
+
+
+# 2. install these packages
+sudo apt-get update
+sudo apt install nodejs
+sudo apt install git
+sudo apt install npm
+
+
+# 3.0 get bootnodes client from github
+// You are in directory ~/IPTM2020/IPTM_TESTNET2020
+// git clone <url> --branch <branch>
+ls -l
+git clone https://github.com/iexplotech/IPTM_Bootnodes_Client --branch master
+cd IPTM_Bootnodes_Client/
+ls -l
+
+
+# 4.0 Set NodeId, You are in directory ~/IPTM2020/IPTM_TESTNET2020/IPTM_Bootnodes_Client/
+// If you are running as Sealer Node, set to your university name e.g. "UiTM-Sealer", "UPM-Sealer" etc. as nodeId. 
+// Same as the id as you have used for iptm 2020 genesis to create geth node
+// If your node is not register with IPTM Secretariat, then you are running as a normal node. Each IPT only have one Sealer Node.
+
+// If you are running as Normal Node, just uses My_Name-Organization e.g. Mohd_Anuar-iExploTech, Ramlan_Mahmod-UPM etc. as name or nodeId. 
+// If you have title Dato, Dr, Prof, Ir, Ts etc. Then e.g. TS_DR_Mohd_Anuar-iExploTech, PROF_DR_Ramlan_Mahmod-UPM. 
+// Use Title in CAPITAL LETTERS.
+
+// Choose Unique name/id to avoid duplicate in bootnode server. Characters are case-sentive.
+// If the same nodeId found, the latest Id will be used even though both are running by different IPTM user. Be carefull!
+// Open this link to check list of running nodeId using your web browser: http://www.iptm.online:8080/index.html
+
+// 4A. Set you nodeId if your are Sealer Node!. Please minimize the length. This will save your nodeId in file nodeId.txt
+echo IPT_NAME-Sealer> nodeId.txt
+
+// or 
+
+// 4B. Set you nodeId if your are Normal Node!. Please minimize the length. This will save your nodeId in file nodeId.txt
+echo My_Name-Organization> nodeId.txt
+
+
+# 5.0 Update file permission. You are in directory ~/IPTM2020/IPTM_TESTNET2020/IPTM_Bootnodes_Client/
+# !Your IPTM geth client MUST RUNNING! in directory ~/IPTM2020/IPTM_TESTNET2020/
+ls -l
+sudo chmod 660 *
+ls -l
+node iptm_client.js > iptm_client.log
+
+
+# 6. Run this link in browser to check your node status in IPTM Bootnodes Deskboard
+http://www.iptm.online:8080/index.html
+
+
+# 7. If your iptm_client.js crached/stopped, please share error message in the console with Dr. Mohd Anuar for fixing this bug.
+// send it to github by creating the issue in this link:
+// https://github.com/iexplotech/IPTM_Bootnodes_Client/issues
+// Please help IPTM Secretariat by sharing the problem for future improvement. You may contribute too in patching the bug.
+
+
+
+#### Setup IPTM Bootnode Server 2020 ####
+# Only one running IPTM Bootnode Server 2020, at http://www.iptm.online:8080/index.html
+# Right now, secretariat will manage this server. IPTM Sealer and Normal Nodes just run the IPTM Bootnode Client 2020!
+# To setup this server, do Steps #1, and #2 as above.
+
+# 3. get bootnodes server from github. You are in directory ~/IPTM2020/IPTM_TESTNET2020/
+// git clone <url> --branch <branch>
+ls
+git clone https://github.com/iexplotech/IPTM_Bootnodes_Server --branch master
+cd IPTM_Bootnodes_Server/
+ls -l
+chmod 660 *
+ls -l
+node server.js > server.log
+
+
+# 4. If your server.js crached/stopped, please share error message in the console with Dr. Mohd Anuar for fixing this bug.
