@@ -35,4 +35,11 @@ If not running IPTM Bootnodes Client, your geth always at block 0 because not co
 
 ## 4.0 IPTM Blockscout Deskboard
 ### Deskboard for Blockchain Transactions, Smartcontract Transactions etc.
-Not Setup yet. <br>
+Not Setup yet.
+<br> <br>
+
+## 5.0 IPTM Discussin Group (Discord)
+### Question, Sugestion or Bug Report
+We discuss at Discord: https://discord.gg/XSatKD. <br>
+<br> <br>
+
