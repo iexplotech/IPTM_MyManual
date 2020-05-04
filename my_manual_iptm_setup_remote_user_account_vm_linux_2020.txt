@@ -14,7 +14,7 @@
 
 # 1. Basic Setup: Create new linux user account
 // Assume that you already install ssh server in your remote Cloud VM. Existed by default.
-// Now you want to setup new user account for IPTM node client. Never use root account for non-system configration works.
+// Now you want to setup new user account for IPTM node client. Never use root account for non-system configuration works.
 whoami
 sudo -i
 useradd -m -d /home/user user -p 123456    // add new account, user is the account name
