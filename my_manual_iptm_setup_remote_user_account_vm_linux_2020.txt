@@ -1,0 +1,69 @@
+#################################################################
+# Manual: Setup Remote SSL Account in VM Linux OS               #
+# Prepare By: Dr. Mohd Anuar Mat Isa                            #
+# Version: 1.0, 04 May 2020                                     #
+# License: GNU GPL3, www.iexplotech.com, github.com/iexplotech  #
+#################################################################
+
+* Open this manual using Notepad++ for better view!
+* Some linux packages may already installed.
+
+#### Initial Setup: Download Files ####
+# Open command line (Linux Terminal). Follow exactly this command!
+# All Steps must be successfull!
+
+# 1. Basic Setup: Create new linux user account
+// Assume that you already install ssh server in your remote Cloud VM. Existed by default.
+// Now you want to setup new user account for IPTM node client. Never use root account for non-system configration works.
+whoami
+sudo -i
+useradd -m -d /home/user user -p 123456    // add new account, user is the account name
+passwd user    // change user password, write somewhere at safe place the new password of user account 
+apt-get install sudo
+usermod -aG sudo user
+getent group | grep sudo
+su user
+bash
+whoami
+cd ~
+pwd
+
+
+# 2. Afterthat you may close ssh terminal. Sometime you need to restart your linux to make password change affect. 
+// Then try to re-login using new user account. For google cloud, just use web terminal provided by Google Cloud.
+
+
+# 3. Setup Remote Terminal using screen
+// To connect remote VM, we use ssh. However, when we close ssh terminal or internet disconnected,
+// the current running application inside ssh terminal will be terminated together with ssl.
+// to avoid this problem, we use screen terminal whereby the screen still running even though 
+// ssl terminated. Therefore, if you are running IPTM node remotely, you MUST use screen! 
+
+## remote your vm and run as 'user' account. For Google cloud, just use web terminal provided by Google Cloud.
+
+## install screen
+sudo apt-get install screen
+
+## Start screen
+screen     // you need to press spacebar, use terminal wrapped by screen
+
+## List all active screens
+screen -ls
+
+## Resume screen 
+screen -ls
+screen -r  <id>
+
+## Detach screen (switch between screen)
+CTR + A
+CTR + D
+
+## Properly close exit the current running screen
+exit
+
+## Kill Attached Screen in Linux
+screen -ls
+screen -S <SCREENNAME> -p 0 -X quit
+
+## you may watch this video in youtube: https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/
+## or google for other video tutorials.
