@@ -13,8 +13,8 @@ To join IPTM Testnet network, You must setup as follows: <br>
 #### Windows 10, Refer this manual: my_manual_iptm_sealer_node_2020_windows.txt 
 * Not recomended to run a Sealer Node in Windows OS! <br>
 #### Linux, Refer this manual: my_manual_iptm_sealer_node_2020_linux.txt 
-* Strongly recomended!<br>
-<br>
+* Strongly recomended!
+<br> <br>
 
 ## 2.0 Setup IPTM Normal Node
 ### For IPTM Network Transactions, Blockchain Transactions, Smartcontract Transactions etc.
@@ -35,6 +35,7 @@ If not running IPTM Bootnodes Client, your geth always at block 0 because not co
 
 ## 4.0 Setup Remote SSH Account and Terminal Screen for IPTM Node
 #### Linux, Refer this manual: my_manual_iptm_setup_remote_user_account_vm_linux_2020.txt
+Only for remote Linux or Cloud VM.
 <br> <br>
 
 ## 5.0 IPTM Blockscout Deskboard
