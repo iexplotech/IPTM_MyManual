@@ -1,0 +1,105 @@
+#################################################################
+# Manual: Setup Cloud VM using Linux OS               #
+# Prepare By: Dr. Mohd Anuar Mat Isa                            #
+# Version: 1.0, 09 May 2020                                     #
+# License: GNU GPL3, www.iexplotech.com, github.com/iexplotech  #
+#################################################################
+
+* Open this manual using Notepad++ for better view!
+* Some linux packages may already installed.
+
+### Cloud VM Specification ###
+
+## Minimum VM Configuration
+Zone: asia-southeast1-a (nearest to you)
+custom VM (1 vCPU, 1 GB memory, 15~20GB HDD) - low cost to pay monthly
+one public IP: External IP (EIP)
+
+## Firewall
+// Configure to open geth P2P port TCP 30303 for INBOUND/OUTBOUND
+// Configure to open SSH port TCP 22 for INBOUND/OUTBOUND
+// Do it by your self!! no manual from me for this nasty work!
+
+
+### How To Add Swap Space on Ubuntu / Debian
+// Open this link, read it
+// https://linuxize.com/post/how-to-add-swap-space-on-ubuntu-18-04/
+
+## show linux swap
+sudo swapon --show
+// If the output is empty, it means that your system does not have swap space enabled.
+
+## create 4GB Swapfile (virtual memory)
+cd /
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo swapon --show
+
+// Makesure swapfile successfull created.
+// To make the change permanent after reboot open the /etc/fstab file
+sudo nano /etc/fstab
+
+## paste the following line: including "/" this slash char - root path
+/swapfile swap swap defaults 0 0
+
+## Look running process and swap usage using top
+top
+CTR + C 	// to close top
+sudo free -h
+
+## Adjusting the Swappiness Value
+// Swappiness is a Linux kernel property that defines how often the system will use the swap space. 
+// Swappiness can have a value between 0 and 100. 
+// A low value will make the kernel to try to avoid swapping whenever possible, 
+// while a higher value will make the kernel use the swap space more aggressively.
+// If you have small RAM, adjust to use more swap
+sudo sysctl vm.swappiness=75
+
+## Removing a Swap File - SKIPPED!!
+// If required only to do this!!
+sudo swapoff -v /swapfile
+
+## edit using nano /etc/fstab
+//remove the swap file entry "/swapfile swap swap defaults 0 0" from the "/etc/fstab" file
+
+## Makesure you remove the entry in fstab. if not your linux not be able to boot due to missing swap!! Nasty problem!!
+// then delete /swapfile 
+sudo rm /swapfile
+
+
+### SCREEN Terminal ###
+// To connect remote VM, we use ssh. However, when we close ssh terminal or internet disconnected,
+// the current running application inside ssh terminal will be terminated together with ssl.
+// to avoid this problem, we use screen terminal whereby the screen still running even though 
+// ssl terminated. Therefore, if you are running IPTM node remotely, you MUST use screen! 
+
+## remote your vm and run as 'user' account. For Google cloud, just use web terminal provided by Google Cloud.
+
+## install screen
+sudo apt-get install screen
+
+## Start screen
+screen     // you need to press spacebar, use terminal wrapped by screen
+
+## List all active screens
+screen -ls
+
+## Resume screen 
+screen -ls
+screen -r  <id>
+
+## Detach screen (switch between screen)
+CTR + A
+CTR + D
+
+## Properly close exit the current running screen
+exit
+
+## Kill Attached Screen in Linux
+screen -ls
+screen -S <SCREENNAME> -p 0 -X quit
+
+## you may watch this video in youtube: https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/
+## or google for other video tutorials.
