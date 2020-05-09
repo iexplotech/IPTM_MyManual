@@ -37,7 +37,7 @@ If not running IPTM Bootnodes Client, your geth always at block 0 because not co
 #### Linux, Refer these manuals:
 #### my_manual_iptm_setup_cloud_vm_linux_2020.txt
 #### my_manual_iptm_setup_remote_user_account_vm_linux_2020.txt
-Only for remote Linux or Cloud VM.
+* Only for remote Linux or Cloud VM.
 <br> <br>
 
 ## 5.0 IPTM Blockscout Deskboard
