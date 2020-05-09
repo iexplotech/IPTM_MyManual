@@ -33,8 +33,10 @@ If not running IPTM Bootnodes Client, your geth always at block 0 because not co
 * included manual for bootnodes server
 <br> <br>
 
-## 4.0 Setup Remote SSH Account and Terminal Screen for IPTM Node
-#### Linux, Refer this manual: my_manual_iptm_setup_remote_user_account_vm_linux_2020.txt
+## 4.0 Setup Cloud VM, Remote SSH Account and Terminal Screen for IPTM Node
+#### Linux, Refer these manuals:
+#### my_manual_iptm_setup_cloud_vm_linux_2020.txt
+#### my_manual_iptm_setup_remote_user_account_vm_linux_2020.txt
 Only for remote Linux or Cloud VM.
 <br> <br>
 
