@@ -1,7 +1,7 @@
 #################################################################
 # Manual: Setup IPTM Normal Node 2020 in Windows 10 OS          #
 # Prepare By: Dr. Mohd Anuar Mat Isa                            #
-# Version: 1.0, 01 May 2020                                     #
+# Version: 1.1, 11 May 2020                                     #
 # License: GNU GPL3, www.iexplotech.com, github.com/iexplotech  #
 #################################################################
 
@@ -22,14 +22,17 @@ cd IPTM_TESTNET2020
 // 2. You are in Windows Terminal. Download wget for windows
 certutil.exe -urlcache -split -f "https://github.com/iexplotech/wget/releases/download/1.20.3/wget.exe" wget.exe
 
-// 3. You are in Windows Terminal. Download geth for windows
-wget https://github.com/iexplotech/geth/releases/download/1.9.7-stable/geth_windows.zip
+// 3. You are in Windows Terminal. Download geth for windows.  This is the stable release for IPTM Testnet.
+// This is the previous version of IPTM geth
+// wget https://github.com/iexplotech/geth/releases/download/1.9.7-stable/geth_windows.zip -O geth_windows.zip
+// This is the latest IPTM geth
+wget https://github.com/iexplotech/geth/releases/download/1.9.13/geth_windows.zip -O geth_windows.zip
 
 // 4. You are in Windows Terminal. Extract geth_windows.zip
 tar -xvf geth_windows.zip
 
 // 5. You are in Windows Terminal. Download Genesis/Configuration for IPTM Testnet 2020
-wget https://raw.githubusercontent.com/iexplotech/IPTM_Genesis/master/iptm_testnet_genesis_2020.json
+wget https://raw.githubusercontent.com/iexplotech/IPTM_Genesis/master/iptm_testnet_genesis_2020.json -O iptm_testnet_genesis_2020.json
 
 // 6. You are in Windows Terminal. Create start_cmd.bat file
 echo cmd> start_cmd.bat
@@ -97,7 +100,7 @@ geth --networkid 496 --rpc --rpcaddr 0.0.0.0 --port 30303 --rpcport 8545 --rpcap
 #8 You are in Geth Terminal
 #  see all accounts in directory "data_IPTM\node1\chain-data\keystore"
 #  you must download this file in Windows Terminal and place it in the geth binary directory using: 
-#  wget https://raw.githubusercontent.com/iexplotech/IPTM_Sample_Codes/master/myBalance.js
+#  wget https://raw.githubusercontent.com/iexplotech/IPTM_Sample_Codes/master/myBalance.js -O myBalance.js
 loadScript("myBalance.js")
 checkAllBalances()
 

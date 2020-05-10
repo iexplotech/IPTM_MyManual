@@ -1,7 +1,7 @@
 #################################################################
 # Manual: Setup IPTM Sealer Node 2020 in Linux 10 OS            #
 # Prepare By: Dr. Mohd Anuar Mat Isa                            #
-# Version: 1.0, 01 May 2020                                     #
+# Version: 1.1, 11 May 2020                                     #
 # License: GNU GPL3, www.iexplotech.com, github.com/iexplotech  #
 #################################################################
 
@@ -24,17 +24,23 @@ ls -l
 // 2. Install these deb linux packages, for rpm, use yum
 sudo apt-get update
 sudo apt-get install wget
+sudo apt-get install unzip
 
-// 3. Download geth for Linux, This is a stable release for IPTM Testnet.
-wget https://github.com/iexplotech/geth/releases/download/1.9.7-stable/geth_linux.zip
+// 3. Download geth for Linux,  This is the stable release for IPTM Testnet.
+// This is the previous version of IPTM geth
+// wget https://github.com/iexplotech/geth/releases/download/1.9.7-stable/geth_linux.zip -O geth_linux.zip
+// This is the latest IPTM geth
+wget https://github.com/iexplotech/geth/releases/download/1.9.13/geth_linux.zip -O geth_linux.zip
 
 // 4. Extract geth_linux.zip
 ls -l
 unzip geth_linux.zip
+chmod 770 geth
+./geth version
 ls -l
 
 // 5. Download Genesis/Configuration for IPTM Testnet 2020
-wget https://raw.githubusercontent.com/iexplotech/IPTM_Genesis/master/iptm_testnet_genesis_2020.json
+wget https://raw.githubusercontent.com/iexplotech/IPTM_Genesis/master/iptm_testnet_genesis_2020.json -O iptm_testnet_genesis_2020.json
 ls -l
 cat iptm_testnet_genesis_2020.json
 
@@ -116,7 +122,7 @@ cp accounts/keystore/UTC--* data_IPTM/node1/chain-data/keystore
 #8 You are in Geth Terminal
 #  see all accounts in directory "data_IPTM\node1\chain-data\keystore"
 #  you must download this file in Linux Terminal and place it in the geth binary directory using: 
-#  wget https://raw.githubusercontent.com/iexplotech/IPTM_Sample_Codes/master/myBalance.js
+#  wget https://raw.githubusercontent.com/iexplotech/IPTM_Sample_Codes/master/myBalance.js -O myBalance.js
 loadScript("myBalance.js")
 checkAllBalances()
 
@@ -224,6 +230,11 @@ web3.toChecksumAddress("0x997ac695cd52e0cc1c4b3ce84c08b79699a43853")
 //Rollback blockchain to block 0. 
 //Not recomended to run except block corrupted. Using Hexa number. You may roll to other blokc no such as 0xFFFF
 debug.setHead("0x0")
+
+# EXTRA - SKIPPED. Do if you are instructed by IPTM Secretariat
+//Change default price to another value
+//Minimal gas price to accept for mining a transactions
+--gasprice "1000000000"    // default value 1 GWei or 0.000000001 Ether
 
 
 

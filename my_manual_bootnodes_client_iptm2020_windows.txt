@@ -1,11 +1,17 @@
 #################################################################
 # Manual: Setup IPTM Bootnode Client 2020 in Windows 10 OS      #
 # Prepare By: Dr. Mohd Anuar Mat Isa                            #
-# Version: 1.0, 01 May 2020                                     #
+# Version: 1.1, 11 May 2020                                     #
 # License: GNU GPL3, www.iexplotech.com, github.com/iexplotech  #
 #################################################################
 
 * Open this manual using Notepad++ for better view!
+
+#### Update the Existing IPTM Bootnode ####
+// If you want to update to the latest version, you MUST DELETE the existing "IPTM_Bootnodes_Client" folder. 
+// this the default path: IPTM2020/IPTM_TESTNET2020/IPTM_Bootnodes_Client
+
+// Then redo the following steps.
 
 #### Setup IPTM Bootnode Client 2020 in Windows ####
 # 1. Create new project directory either in drive D: or C: let use drive D:
@@ -18,8 +24,11 @@ cd IPTM_TESTNET2020
 
 # 2. Download and Install these packages
 # Now you are in directory: D:\IPTM2020\IPTM_TESTNET2020
-# nodejs Download https://nodejs.org/en/download/ choose 64-bit Windows Installer (.msi)
+# nodejs Download https://nodejs.org/en/download/ choose 64-bit Windows Installer (.msi) *bundle with npm
 # git Download https://desktop.github.com/ choose 64-bit Windows
+node --version
+npm --version
+git --version
 
 
 # 3. Makesure you are in directory with geth client: D:\IPTM2020\IPTM_TESTNET2020 based on this manual:

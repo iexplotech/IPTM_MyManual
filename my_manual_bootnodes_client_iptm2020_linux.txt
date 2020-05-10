@@ -1,11 +1,17 @@
 #################################################################
 # Manual: Setup IPTM Bootnode Client 2020 in Linux OS           #
 # Prepare By: Dr. Mohd Anuar Mat Isa                            #
-# Version: 1.0, 01 May 2020                                     #
+# Version: 1.1, 11 May 2020                                     #
 # License: GNU GPL3, www.iexplotech.com, github.com/iexplotech  #
 #################################################################
 
 * Open this manual using Notepad++ for better view!
+
+#### Update the Existing IPTM Bootnode ####
+// If you want to update to the latest version, you MUST DELETE the existing "IPTM_Bootnodes_Client" folder. 
+rm -R ~/IPTM2020/IPTM_TESTNET2020/IPTM_Bootnodes_Client
+
+// Then redo the following steps.
 
 #### Setup IPTM Bootnode Client 2020 in Linux ####
 # 1. Create new project directory
@@ -22,6 +28,9 @@ sudo apt-get update
 sudo apt install nodejs
 sudo apt install git
 sudo apt install npm
+nodejs --version
+npm --version
+git --version
 
 
 # 3.0 get bootnodes client from github
