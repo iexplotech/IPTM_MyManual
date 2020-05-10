@@ -1,4 +1,4 @@
-# IPTM_MyManual V1.1
+# IPTM_MyManual v1.1
 All Manuals for IPTM Projects. Use Notepad++ to open these manuals. Download Here: https://notepad-plus-plus.org/
 <br>
 To join IPTM Testnet network, You must setup as follows: <br>
