@@ -35,7 +35,9 @@ If not running IPTM Bootnodes Client, your geth always at block 0 because not co
 
 ## 4.0 Setup Cloud VM, Remote SSH Account and Terminal Screen for IPTM Node
 #### Linux, Refer these manuals:
-My_manual_snapshot_steps_Google_Cloud_Setup.pdf - coming soon
+
+Refer this snapshot before setup Google cloud vm <br>
+#### Snapshot_Setup_Google_Cloud_VM.pdf
 #### my_manual_iptm_setup_cloud_vm_linux_2020.txt
 #### my_manual_iptm_setup_remote_user_account_vm_linux_2020.txt
 * Only for remote Linux or Cloud VM.
