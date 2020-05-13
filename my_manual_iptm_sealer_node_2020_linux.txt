@@ -35,7 +35,7 @@ wget https://github.com/iexplotech/geth/releases/download/1.9.13/geth_linux.zip 
 // 4. Extract geth_linux.zip
 ls -l
 unzip geth_linux.zip
-chmod 770 geth
+sudo chmod 770 geth
 ./geth version
 ls -l
 
