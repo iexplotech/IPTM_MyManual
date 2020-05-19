@@ -12,7 +12,7 @@
 // All update will be fetched from iExploTech GitHub
 cd D:\IPTM2020\IPTM_TESTNET2020\IPTM_Bootnodes_Client\
 git pull --no-rebase
-ls -l
+dir
 // then run IPTM Bootnode Client as Step 6
 
 
