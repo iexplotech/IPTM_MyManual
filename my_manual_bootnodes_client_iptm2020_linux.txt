@@ -7,11 +7,15 @@
 
 * Open this manual using Notepad++ for better view!
 
-#### Update the Existing IPTM Bootnode ####
-// If you want to update to the latest version, you MUST DELETE the existing "IPTM_Bootnodes_Client" folder. 
-rm -R ~/IPTM2020/IPTM_TESTNET2020/IPTM_Bootnodes_Client
+#### Update the Existing IPTM Bootnode ####  - First time install?, go to Step 1.
+// If you want to update to the latest version, no need to repeat all steps. Just run the following command. 
+// All update will be fetched from iExploTech GitHub
+cd ~/IPTM2020/IPTM_TESTNET2020
+git pull --no-rebase
+ls -l
+// then run either IPTM Bootnode Client or Server
 
-// Then redo the following steps.
+
 
 #### Setup IPTM Bootnode Client 2020 in Linux ####
 # 1. Create new project directory
@@ -24,13 +28,14 @@ cd IPTM_TESTNET2020
 
 
 # 2. install these packages
-sudo apt-get update
+sudo apt update
 sudo apt install nodejs
 sudo apt install git
 sudo apt install npm
 nodejs --version
 npm --version
 git --version
+sudo apt install wget
 
 
 # 3.0 get bootnodes client from github

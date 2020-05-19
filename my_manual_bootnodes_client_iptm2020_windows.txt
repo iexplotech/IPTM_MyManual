@@ -7,11 +7,14 @@
 
 * Open this manual using Notepad++ for better view!
 
-#### Update the Existing IPTM Bootnode ####
-// If you want to update to the latest version, you MUST DELETE the existing "IPTM_Bootnodes_Client" folder. 
-// this the default path: IPTM2020/IPTM_TESTNET2020/IPTM_Bootnodes_Client
+#### Update the Existing IPTM Bootnode #### - First time install?, go to Step 1.
+// If you want to update to the latest version, no need to repeat all steps. Just run the following command. 
+// All update will be fetched from iExploTech GitHub
+cd D:\IPTM2020\IPTM_TESTNET2020\IPTM_Bootnodes_Client\
+git pull --no-rebase
+ls -l
+// then run IPTM Bootnode Client as Step 6
 
-// Then redo the following steps.
 
 #### Setup IPTM Bootnode Client 2020 in Windows ####
 # 1. Create new project directory either in drive D: or C: let use drive D:
