@@ -11,6 +11,10 @@
 # Open command line (Windows Terminal). Follow exactly this command except drive D: or C:
 # All Steps must Successfull! if not, do it in windows gui
 
+// Pre System Configuration
+// OS Time: You must sync your computing machice or VM with Sirim time. 
+// If not, your node will be delayed from the latest block.
+
 // 1. Create new project directory either in drive D: or C: let uses drive D:
 D:     // press enter
 mkdir IPTM2020
