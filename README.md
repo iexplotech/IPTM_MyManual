@@ -1,6 +1,8 @@
 # IPTM_MyManual v1.1
 All Manuals for IPTM Projects. Use Notepad++ to open these manuals. Download Here: https://notepad-plus-plus.org/
 <br>
+Before setup anything, please read this important information about IPTM TestNet 2020: https://github.com/iexplotech/IPTM_MyManual/blob/master/Introduction%20To%20IPTM%20TestNet%202020%20(IPTM%20Sealer%20or%20Normal%20Node).pdf
+<br>
 To join IPTM Testnet network, You must setup as follows: <br>
 2.0 Setup IPTM Normal Node <br>
 3.0 Setup IPTM Bootnodes Client <br> 
