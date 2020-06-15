@@ -31,8 +31,8 @@ View IPTM Bootnodes Deskboard: http://bootnodes.iptm.online:8080/index.html <br>
 You must setup Bootnodes Client to for your IPTM Sealer and Normal Nodes. <br>
 If not running IPTM Bootnodes Client, your geth always at block 0 because not connected to other IPTM peers.
 #### Windows 10, Refer this manual: my_manual_bootnodes_client_iptm2020_windows.txt <br> 
-Please install node js for windows. This version support for truffle tools.
-https://nodejs.org/dist/latest-v10.x/node-v10.20.1-x64.msi <br>
+Please install nodejs v10.x.x for windows. This version support for truffle tools.
+https://nodejs.org/dist/v10.21.0/node-v10.21.0-x64.msi <br>
 #### Linux, Refer this manual: my_manual_bootnodes_client_iptm2020_linux.txt
 * included manual for bootnodes server
 <br> <br>
