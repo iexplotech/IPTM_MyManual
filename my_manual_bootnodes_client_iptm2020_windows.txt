@@ -11,6 +11,8 @@
 // If you want to update to the latest version, no need to repeat all steps. Just run the following command. 
 // All update will be fetched from iExploTech GitHub
 cd D:\IPTM2020\IPTM_TESTNET2020\IPTM_Bootnodes_Client\
+dir
+del iptm_client.*
 git pull --no-rebase
 dir
 // then run IPTM Bootnode Client as Step 6
