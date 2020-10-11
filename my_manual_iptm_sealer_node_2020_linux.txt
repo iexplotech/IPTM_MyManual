@@ -45,6 +45,12 @@ unzip geth_linux.zip
 sudo chmod 770 geth
 ./geth version
 ls -l
+// download script auto reboot geth
+wget https://raw.githubusercontent.com/iexplotech/geth/master/auto_geth.sh
+wget https://raw.githubusercontent.com/iexplotech/geth/master/auto_run.sh
+ls -l
+chmod 700 auto*
+ls -l
 
 // 5. Download Genesis/Configuration for IPTM Testnet 2020
 wget https://raw.githubusercontent.com/iexplotech/IPTM_Genesis/master/iptm_testnet_genesis_2020.json -O iptm_testnet_genesis_2020.json
