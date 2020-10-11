@@ -58,7 +58,12 @@ sudo chmod 660 *
 ls -l
 sudo chmod 770 geth 
 ls -l
-
+// download script auto reboot geth
+wget https://raw.githubusercontent.com/iexplotech/geth/master/auto_geth.sh
+wget https://raw.githubusercontent.com/iexplotech/geth/master/auto_run.sh
+ls -l
+chmod 700 auto*
+ls -l
 # you have done basic configuration for linux permission, go to setup sealer node.
 
 
