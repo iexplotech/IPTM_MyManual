@@ -73,6 +73,7 @@ echo My_Name-Organization> nodeId.txt
 # !Your IPTM geth client MUST RUNNING! in directory ~/IPTM2020/IPTM_TESTNET2020/
 ls -l
 sudo chmod 660 *
+chmod 700 auto_run.sh
 ls -l
 node iptm_client.js > iptm_client.log
 
