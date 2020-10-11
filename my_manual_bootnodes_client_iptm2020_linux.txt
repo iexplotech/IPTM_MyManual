@@ -29,13 +29,13 @@ cd IPTM_TESTNET2020
 
 # 2. install these packages
 sudo apt update
+sudo apt install wget
 sudo apt install nodejs
 sudo apt install git
 sudo apt install npm
 nodejs --version
 npm --version
 git --version
-sudo apt install wget
 
 
 # 3.0 get bootnodes client from github
@@ -78,7 +78,7 @@ node iptm_client.js > iptm_client.log
 
 
 # 6. Run this link in browser to check your node status in IPTM Bootnodes Deskboard
-http://www.iptm.online:8080/index.html
+http://iptmbootnodes.iexplotech.com:8080/index.html
 
 
 # 7. If your iptm_client.js crached/stopped, please share error message in the console with Dr. Mohd Anuar for fixing this bug.
