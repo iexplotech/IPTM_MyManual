@@ -75,8 +75,8 @@ ls -l
 sudo chmod 660 *
 chmod 700 auto_run.sh
 ls -l
-node iptm_client.js > iptm_client.log
-
+node iptm_client.js
+#node iptm_client.js > iptm_client.log   // not use this command
 
 # 6. Run this link in browser to check your node status in IPTM Bootnodes Deskboard
 http://iptmbootnodes.iexplotech.com:8080/index.html
