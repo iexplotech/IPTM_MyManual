@@ -20,6 +20,10 @@ one public IP: External IP (EIP)
 // Configure to open SSH port TCP 22 for INBOUND/OUTBOUND
 // Do it by your self!! no manual from me for this nasty work!
 
+## TimeZone
+timedatectl
+sudo timedatectl set-timezone Asia/Kuala_Lumpur
+timedatectl
 
 ### How To Add Swap Space on Ubuntu / Debian
 // Open this link, read it
